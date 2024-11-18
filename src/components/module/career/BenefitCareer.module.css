@@ -1,0 +1,50 @@
+.title {
+  font-size: 2.125rem; /* Equivalent to 34px */
+  font-weight: 900;
+  
+
+  @media (max-width: $mantine-breakpoint-sm) {
+    font-size: 1.5rem; /* Equivalent to 24px */
+  }
+}
+
+.description {
+  max-width: 37.5rem; /* Equivalent to 600px */
+  
+  margin: auto;
+  color: var(--mantine-color-black);
+
+  &::after {
+    content: "";
+    display: block;
+    /* background-color: var(--mantine-color-blue-filled); */
+    width: 2.8125rem; /* Equivalent to 45px */
+    height: 0.125rem; /* Equivalent to 2px */
+    margin-top: var(--mantine-spacing-sm);
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    
+  }
+}
+
+.card {
+  border: 0.0625rem solid; /* Equivalent to 1px */
+  text-align: center;
+  border-color: var(
+    --mantine-color-gray-1
+  ); /* Replace light-dark logic if necessary */
+}
+
+.cardTitle {
+  &::after {
+    content: "";
+    display: block;
+    /* background-color: var(--mantine-color-blue-filled); */
+    width: 2.8125rem; /* Equivalent to 45px */
+    height: 0.125rem; /* Equivalent to 2px */
+    margin-top: var(--mantine-spacing-sm);
+
+    
+  }
+}
