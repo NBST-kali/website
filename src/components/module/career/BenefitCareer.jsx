@@ -7,6 +7,7 @@ import {
   Container,
   rem,
   useMantineTheme,
+  Center,
 } from "@mantine/core";
 import { IconGauge, IconUser, IconCookie } from "@tabler/icons-react";
 import classes from "./BenefitCareer.module.css";
@@ -49,7 +50,7 @@ export function BenefitCareer() {
       padding="xl"
     >
       <feature.icon
-        style={{ width: rem(50), height: rem(50) }}
+        style={{ width: rem(50), height: rem(50), marginLeft: "120px" }}
         stroke={2}
         color={theme.colors.blue[6]}
       />
@@ -68,8 +69,8 @@ export function BenefitCareer() {
         Benefits
       </Title>
 
-      <Text c="dimmed" className={classes.description} ta="center" mt="md">
-        Here are some of the perks of being a part of Software Company
+      <Text className={classes.description} ta="center" mt="md">
+        Here are some of the perks of being a part of Software Company.
       </Text>
 
       <SimpleGrid cols={{ base: 1, md: 3 }} spacing="xl" mt={50}>

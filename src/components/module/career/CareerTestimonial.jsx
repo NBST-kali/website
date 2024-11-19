@@ -41,7 +41,7 @@ const CareerTestimonial = () => {
               fontWeight: 600,
               color: "#050419",
               fontSize: theme.fontSizes.xl,
-              textAlign: "center",
+              textAlign: "center", // Ensure the text is centered
               [theme.fn.smallerThan("sm")]: {
                 fontSize: theme.fontSizes.lg * 2,
               },
@@ -51,7 +51,7 @@ const CareerTestimonial = () => {
               },
             })}
           >
-            What our Clients Say
+            What Our Client's Say
           </Title>
         </Box>
       </Box>
@@ -138,8 +138,15 @@ const CareerTestimonial = () => {
                   display: "flex",
                   flexDirection: "column",
                   gap: rem(20),
+                  position: "relative",
+                  zIndex: "500",
                 }}
               >
+                <img
+                  src="/person.png"
+                  alt="person"
+                  className="w-14 h-14 sm:w-16 sm:h-16 rounded-full mb-4 absolute -top-8 left-4 sm:left-6"
+                />
                 <Text size="sm" color="gray">
                   {slide.content}
                 </Text>

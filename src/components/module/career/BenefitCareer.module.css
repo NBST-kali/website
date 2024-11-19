@@ -31,10 +31,16 @@
 .card {
   border: 0.0625rem solid; /* Equivalent to 1px */
   text-align: center;
+  transition: transform .2s;
   border-color: var(
     --mantine-color-gray-1
   ); /* Replace light-dark logic if necessary */
 }
+
+.card:hover{
+  transform: scale(1.5);
+}
+
 
 .cardTitle {
   &::after {
