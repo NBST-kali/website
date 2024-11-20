@@ -10,6 +10,7 @@
 
 .description {
   max-width: 37.5rem; /* Equivalent to 600px */
+  text-align: center;
   
   margin: auto;
   color: var(--mantine-color-black);

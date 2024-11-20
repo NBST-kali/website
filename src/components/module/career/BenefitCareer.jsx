@@ -57,7 +57,7 @@ export function BenefitCareer() {
       <Text fz="lg" fw={500} className={classes.cardTitle} mt="md">
         {feature.title}
       </Text>
-      <Text fz="sm" c="dimmed" mt="sm">
+      <Text fz="sm" mt="sm">
         {feature.description}
       </Text>
     </Card>
@@ -69,7 +69,7 @@ export function BenefitCareer() {
         Benefits
       </Title>
 
-      <Text className={classes.description} ta="center" mt="md">
+      <Text className={classes.description} mt="md">
         Here are some of the perks of being a part of Software Company.
       </Text>
 

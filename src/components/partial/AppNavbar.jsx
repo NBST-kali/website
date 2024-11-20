@@ -123,7 +123,7 @@ const AppNavbar = () => {
   const toggleDrawer = () => setIsDrawerOpen((prev) => !prev);
 
   return (
-    <nav className="sticky top-0 z-50 bg-white shadow-md">
+    <nav className="sticky top-0 z-50 bg-white shadow-md ">
       {/* Mobile Navbar */}
       <Container className="sm:hidden flex justify-between items-center p-4">
         <a href="/">
@@ -158,42 +158,71 @@ const AppNavbar = () => {
       </Drawer>
 
       {/* Desktop Navbar */}
-      <Container className="hidden sm:flex justify-between items-center p-4">
-        <Group>
+      <Container className="hidden sm:flex items-center justify-between p-4 w-auto">
+        {/* Left: Logo */}
+        <div className="flex items-center">
           <a href="/">
             <img src="/logo.png" alt="Logo" className="h-14 w-44" />
           </a>
+        </div>
+
+        {/* Middle: Navigation Menu */}
+        <div className="flex-grow flex justify-center">
           <Group spacing="xl">
-            <NavLink to="/about">About</NavLink>
-            <NavLink to="/careers">Careers</NavLink>
-            <NavLink to="/products">Products</NavLink>
-            <NavLink to="/services">Services</NavLink>
+            <NavLink
+              to="/about"
+              className="text-lg font-medium text-gray-700 hover:text-blue-600 border-b-indigo-500"
+            >
+              About
+            </NavLink>
+            <NavLink
+              to="/careers"
+              className="text-lg font-medium text-gray-700 hover:text-blue-600"
+            >
+              Careers
+            </NavLink>
+            <NavLink
+              to="/products"
+              className="text-lg font-medium text-gray-700 hover:text-blue-600"
+            >
+              Products
+            </NavLink>
+            <NavLink
+              to="/services"
+              className="text-lg font-medium text-gray-700 hover:text-blue-600"
+            >
+              Services
+            </NavLink>
           </Group>
-        </Group>
-        <Button
-          radius="lg"
-          size="lg"
-          styles={(theme) => ({
-            root: {
-              background: "black",
-              color: theme.white,
-              fontWeight: 700,
-              padding: "0.75rem 1.5rem",
-              fontSize: theme.fontSizes.md,
-              boxShadow: theme.shadows.sm,
-              transition: "transform 0.2s ease-in-out, background 0.3s ease",
-              "&:hover": {
-                background: "linear-gradient(90deg, #6366f1, #3b82f6)",
-                transform: "scale(1.05)",
+        </div>
+
+        {/* Right: Button */}
+        <div className="flex items-center">
+          <Button
+            radius="lg"
+            size="lg"
+            styles={(theme) => ({
+              root: {
+                background: "#050419",
+                color: theme.white,
+                fontWeight: 700,
+                padding: "0.75rem 1.5rem",
+                fontSize: theme.fontSizes.md,
+                boxShadow: theme.shadows.sm,
+                transition: "transform 0.2s ease-in-out, background 0.3s ease",
+                "&:hover": {
+                  background: "linear-gradient(90deg, #6366f1, #3b82f6)",
+                  transform: "scale(1.05)",
+                },
               },
-            },
-            label: {
-              letterSpacing: "0.05em",
-            },
-          })}
-        >
-          Get Consultant
-        </Button>
+              label: {
+                letterSpacing: "0.05em",
+              },
+            })}
+          >
+            Get Consultant
+          </Button>
+        </div>
       </Container>
     </nav>
   );

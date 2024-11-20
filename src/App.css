@@ -32,4 +32,67 @@
   width: 200px;
 } */
 
-/* Hero Service */
+/* Testimonial in Home */
+/* Zoom effect on card hover */
+.zoom-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth zoom and shadow transition */
+}
+
+.zoom-card:hover {
+  transform: scale(2.05); /* Zoom the card */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+}
+
+/* Hero Services */
+.layout-container {
+  display: flex;
+  flex-wrap: nowrap; /* Ensures both columns remain side by side */
+  gap: 2rem; /* Adds spacing between columns */
+  align-items: flex-start;
+}
+
+.top-section {
+  flex: 1; /* Ensures the left column takes up 50% of the width */
+  max-width: 50%;
+}
+
+.grid-section {
+  flex: 1; /* Ensures the right column takes up 50% of the width */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem; /* Adds spacing between the grid items */
+}
+
+.service-card {
+  background: #ffffff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.service-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transform: scale(1.02);
+  transition: all 0.2s ease-in-out;
+}
+
+@media screen and (max-width: 768px) {
+  .layout-container {
+    flex-wrap: wrap; /* Stacks the sections vertically on smaller screens */
+  }
+
+  .top-section,
+  .grid-section {
+    max-width: 100%;
+  }
+
+  .grid-section {
+    grid-template-columns: repeat(
+      1,
+      1fr
+    ); /* Switches to a single column grid */
+  }
+}

@@ -53,6 +53,7 @@ const Hero = () => {
       px="lg"
       width="auto"
       p="60px"
+      style={{ backgroundColor: "#48628126" }}
     >
       {/* Left Section*/}
 
@@ -61,7 +62,7 @@ const Hero = () => {
           order={1}
           size="h1"
           weight={700}
-          color="#050419"
+          color="#1A202C"
           mb="md"
           pt="100px"
           height="170px"
@@ -72,7 +73,7 @@ const Hero = () => {
           Solutions
         </Title>
 
-        <Text size="lg" color="#232B38" mb="lg">
+        <Text size="lg" color="#000000" mb="lg">
           Tailored software designed to streamline your operations and drive
           growth.
         </Text>
@@ -93,7 +94,7 @@ const Hero = () => {
       {/* Right Section: Image */}
       <Box w="50%" pl="lg">
         <Image
-          src="/hero.jpg"
+          src="/hero.png"
           alt="Right Section"
           fit="cover"
           height={301}

@@ -166,159 +166,63 @@
 // export default HeroServices;
 
 import React from "react";
-import { Box, Text, Title, Button, rem } from "@mantine/core";
-import { Carousel } from "@mantine/carousel";
-import {
-  IconArrowRight,
-  IconArrowLeft,
-  IconArrowUpRight,
-} from "@tabler/icons-react";
+import { Box, Text, Title } from "@mantine/core";
 
 const HeroServices = () => {
+  const services = [
+    {
+      title: "Custom Software Development",
+      content:
+        "Turn your vision into reality with our custom software solutions designed to meet your unique business needs. We work closely with you to create flexible, scalable software that supports your growth.",
+    },
+    {
+      title: "UI/UX Design",
+      content:
+        "Our design experts craft user-friendly interfaces that enhance user engagement and deliver intuitive experiences across all devices.",
+    },
+    {
+      title: "Mobile App Development",
+      content:
+        "We build high-performance mobile applications that provide a seamless user experience, tailored to your specific business needs..",
+    },
+    {
+      title: "Software Integration",
+      content:
+        "We specialize in seamless software integration to optimize your operations and ensure smooth interoperability between various systems and applications.",
+    },
+  ];
+
   return (
     <Box py="xl" px="lg" style={{ backgroundColor: "#F3F4F6" }}>
-      {/* Top Section */}
-      <Box mb="xl">
-        <Text size="sm" color="#0558EE" mb="sm">
-          Our Services
-        </Text>
-        <Title order={1} size="h1" weight={500} color="#050419" mb="md">
-          Our Areas Of Expertise
-        </Title>
-        <Text size="sm" color="gray" style={{ maxWidth: "700px" }}>
-          At [Your Company Name], we provide tailored software solutions to
-          drive your success. <br />
-          Explore our services today!
-        </Text>
-      </Box>
+      <div className="layout-container">
+        {/* Left Column */}
+        <div className="top-section">
+          <Text size="sm" color="#0558EE" mb="sm">
+            Our Services
+          </Text>
+          <Title order={1} size="h1" weight={500} color="#050419" mb="md">
+            Our Areas Of Expertise
+          </Title>
+          <Text size="sm" color="gray" style={{ maxWidth: "600px" }}>
+            At [Your Company Name], we provide tailored software solutions to
+            drive your success. Explore our services today!
+          </Text>
+        </div>
 
-      {/* Carousel */}
-      <div className="carousel">
-        <Carousel
-          withIndicators
-          slideSize="25%"
-          slideGap="0px"
-          align="start"
-          nextControlIcon={
-            <IconArrowRight style={{ width: rem(16), height: rem(16) }} />
-          }
-          previousControlIcon={
-            <IconArrowLeft style={{ width: rem(16), height: rem(16) }} />
-          }
-          withControls
-          classNames={{
-            control: "w-[30px] h-[30px] ",
-            indicators: "custom-indicators",
-            controls: "custom-controls",
-          }}
-          styles={{
-            control: {
-              color: "#0558EE",
-              margin: "5px",
-            },
-            indicator: {
-              width: "30px",
-              height: "10px",
-              backgroundColor: "darkblue",
-              borderRadius: "5px",
-              marginLeft: "10px",
-            },
-          }}
-        >
-          {/* Slides */}
-          {[
-            {
-              title: "Customer Software Development",
-              content:
-                "Transform your vision into reality with our bespoke software solutions. We collaborate closely with you to design, develop, and deploy software tailored to your specific business needs, ensuring flexibility and scalability for future growth.",
-            },
-            {
-              title: "Software Integration",
-              content:
-                "We specialize in seamless software integration to optimize your operations and ensure smooth interoperability between various systems and applications.",
-            },
-            {
-              title: "UI/UX Design",
-              content:
-                "Our design experts craft user-friendly interfaces that enhance user engagement and deliver intuitive experiences across all devices.",
-            },
-            {
-              title: "Mobile App Development",
-              content:
-                "We build high-performance mobile applications that provide a seamless user experience, tailored to your specific business needs.",
-            },
-            {
-              title: "Ethical Hacking",
-              content:
-                "Transform your vision into reality with our bespoke software solutions. We collaborate closely with you to design, develop, and deploy software tailored to your specific business needs, ensuring flexibility and scalability for future growth.",
-            },
-            {
-              title: "Network Administration",
-              content:
-                "We specialize in seamless software integration to optimize your operations and ensure smooth interoperability between various systems and applications.",
-            },
-          ].map((slide, index) => (
-            <Carousel.Slide key={index}>
-              <Box
-                p="md"
-                bg="white"
-                style={{
-                  height: rem(346),
-                  width: rem(312),
-                  display: "flex",
-                  flexDirection: "column",
-                  gap: rem(20),
-                }}
-              >
-                <Title order={3} size="h3" weight={500} mb="sm">
-                  {slide.title}
-                </Title>
-                <Text size="sm" color="gray">
-                  {slide.content}
-                </Text>
-              </Box>
-            </Carousel.Slide>
+        {/* Right Column */}
+        <div className="grid-section">
+          {services.map((service, index) => (
+            <div className="service-card" key={index}>
+              <Title order={4} size="h3" weight={500} mb="sm">
+                {service.title}
+              </Title>
+              <Text size="sm" color="gray">
+                {service.content}
+              </Text>
+            </div>
           ))}
-        </Carousel>
+        </div>
       </div>
-
-      {/* Bottom Section */}
-      <Box
-        py="120px"
-        px="10px"
-        mt="xl"
-        style={{
-          backgroundColor: "#050419",
-          borderRadius: rem(50),
-          textAlign: "center",
-          height: rem(464),
-        }}
-      >
-        <Title
-          order={1}
-          size="h1"
-          mb="md"
-          style={{ lineHeight: "1.2", color: "white" }}
-        >
-          Ready to Transform Your Business?
-        </Title>
-        <Text size="md" color="white" mb="lg">
-          Get in touch with us today for a free consultation and discover how
-          our tailored software solutions can drive your success!
-        </Text>
-        <Button
-          component="a"
-          href="#"
-          radius="xl"
-          size="md"
-          variant="outline"
-          color="white"
-          style={{ backgroundColor: "#050419", color: "white" }}
-          rightIcon={<IconArrowUpRight />}
-        >
-          Get Started
-        </Button>
-      </Box>
     </Box>
   );
 };

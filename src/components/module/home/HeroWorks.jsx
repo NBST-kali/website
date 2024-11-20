@@ -121,15 +121,13 @@ import {
   Title,
   Box,
   Stack,
-  Center,
   SimpleGrid,
-  Skeleton,
   rem,
 } from "@mantine/core";
 
 const PRIMARY_COL_HEIGHT = rem(300);
 
-const SECONDARY_COL_HEIGHT = `calc(${PRIMARY_COL_HEIGHT} / 2 - var(--mantine-spacing-md) / 2)`;
+// const SECONDARY_COL_HEIGHT = `calc(${PRIMARY_COL_HEIGHT} / 2 - var(--mantine-spacing-md) / 2)`;
 
 const HeroWorks = () => {
   return (

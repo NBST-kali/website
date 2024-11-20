@@ -10,7 +10,7 @@ const Hero = () => {
 
       <div className={classes.inner}>
         <Title className={classes.title}>OUR SERVICES</Title>
-
+        {/* Container size */}
         <Container size={800}>
           <Text
             size="lg"
